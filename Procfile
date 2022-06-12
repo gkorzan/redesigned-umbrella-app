@@ -1,1 +1,2 @@
-web: yarn prod
+web: yarn serve
+release: yarn prod
