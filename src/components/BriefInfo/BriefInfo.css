@@ -1,0 +1,9 @@
+.no_outline:focus {
+    outline: none !important;
+}
+.no_cursor {
+    cursor: grab !important;
+}
+.card {
+    cursor: pointer;
+}

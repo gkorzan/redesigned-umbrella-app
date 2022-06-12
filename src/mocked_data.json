@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Москва",
+        "id": 213,
+        "geoid": 213,
+        "lat": 55.755829,
+        "lon": 37.617627,
+        "temp": 23,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/ovc.svg",
+        "condition": "overcast"
+    },
+    {
+        "name": "Санкт-Петербург",
+        "id": 2,
+        "geoid": 2,
+        "lat": 59.939098,
+        "lon": 30.315868,
+        "temp": 24,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_d.svg",
+        "condition": "cloudy"
+    },
+    {
+        "name": "Новосибирск",
+        "id": 65,
+        "geoid": 65,
+        "lat": 55.030204,
+        "lon": 82.92043,
+        "temp": 25,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/ovc.svg",
+        "condition": "overcast"
+    },
+    {
+        "name": "Екатеринбург",
+        "id": 54,
+        "geoid": 54,
+        "lat": 56.838011,
+        "lon": 60.597474,
+        "temp": 15,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/ovc.svg",
+        "condition": "overcast"
+    },
+    {
+        "name": "Казань",
+        "id": 43,
+        "geoid": 43,
+        "lat": 55.796127,
+        "lon": 49.106414,
+        "temp": 21,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_d.svg",
+        "condition": "cloudy"
+    },
+    {
+        "name": "Нижний Новгород",
+        "id": 47,
+        "geoid": 47,
+        "lat": 56.326797,
+        "lon": 44.006516,
+        "temp": 21,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/skc_d.svg",
+        "condition": "clear"
+    },
+    {
+        "name": "Челябинск",
+        "id": 56,
+        "geoid": 56,
+        "lat": 55.159902,
+        "lon": 61.402554,
+        "temp": 17,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/ovc.svg",
+        "condition": "overcast"
+    },
+    {
+        "name": "Самара",
+        "id": 51,
+        "geoid": 51,
+        "lat": 53.195878,
+        "lon": 50.100202,
+        "temp": 24,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_d.svg",
+        "condition": "cloudy"
+    },
+    {
+        "name": "Омск",
+        "id": 66,
+        "geoid": 66,
+        "lat": 54.989347,
+        "lon": 73.368221,
+        "temp": 22,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_d.svg",
+        "condition": "cloudy"
+    },
+    {
+        "name": "Ростов-на-Дону",
+        "id": 39,
+        "geoid": 39,
+        "lat": 47.222078,
+        "lon": 39.720358,
+        "temp": 31,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/skc_d.svg",
+        "condition": "clear"
+    },
+    {
+        "name": "Уфа",
+        "id": 172,
+        "geoid": 172,
+        "lat": 54.735152,
+        "lon": 55.958736,
+        "temp": 18,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_-ra_d.svg",
+        "condition": "lightRain"
+    },
+    {
+        "name": "Красноярск",
+        "id": 62,
+        "geoid": 62,
+        "lat": 56.010569,
+        "lon": 92.852572,
+        "temp": 20,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/skc_n.svg",
+        "condition": "clear"
+    },
+    {
+        "name": "Воронеж",
+        "id": 193,
+        "geoid": 193,
+        "lat": 51.660781,
+        "lon": 39.200296,
+        "temp": 28,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_d.svg",
+        "condition": "cloudy"
+    },
+    {
+        "name": "Пермь",
+        "id": 50,
+        "geoid": 50,
+        "lat": 58.010455,
+        "lon": 56.229443,
+        "temp": 14,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/ovc.svg",
+        "condition": "overcast"
+    },
+    {
+        "name": "Волгоград",
+        "id": 38,
+        "geoid": 38,
+        "lat": 48.707067,
+        "lon": 44.516975,
+        "temp": 30,
+        "imgUrl": "https://yastatic.net/weather/i/icons/funky/dark/bkn_d.svg",
+        "condition": "cloudy"
+    }
+]
