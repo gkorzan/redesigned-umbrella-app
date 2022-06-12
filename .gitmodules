@@ -1,3 +1,0 @@
-[submodule "redesigned-umbrella-service"]
-	path = service
-	url = https://github.com/gkorzan/redesigned-umbrella-service.git
