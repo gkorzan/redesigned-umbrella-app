@@ -58,11 +58,11 @@ function App() {
   }, [mapRef.current]);
 
   const fetchWeatherData = async () => {
-    console.log(API_URL + "/api/v1/weather");
+    // console.log(API_URL + "/api/v1/weather");
     const res = await fetch(API_URL + "/api/v1/weather");
     const body = await res.json();
     setCities(body);
-    console.log(body);
+    // console.log(body);
   };
 
   const onMapLoad = () => {
