@@ -18,6 +18,7 @@ const style = {
 };
 
 function App() {
+  const API_URL = process.env.REACT_APP_API_URL;
   const [cities, setCities] = useState<Array<City>>();
   const [currentZoom, setCurrentZoom] = useState<number>(MAX_ZOOM);
   const [isBriefLayoutShowing, setIsBriefLayoutShowing] = useState(true);
@@ -57,7 +58,8 @@ function App() {
   }, [mapRef.current]);
 
   const fetchWeatherData = async () => {
-    const res = await fetch("http://localhost:3001/api/v1/weather");
+    console.log(API_URL + "/api/v1/weather");
+    const res = await fetch(API_URL + "/api/v1/weather");
     const body = await res.json();
     setCities(body);
     console.log(body);

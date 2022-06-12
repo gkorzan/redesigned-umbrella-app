@@ -10,7 +10,7 @@ interface CityPinProps {
 const TableBlock = ({ objkey, value }: { objkey: string; value: any }) => {
   return (
     <tr>
-      <td>{objkey}</td>
+      <td>{objkey}:</td>
       <td>{value}</td>
     </tr>
   );
@@ -23,6 +23,9 @@ export const CityPin: FC<CityPinProps> = ({ city }) => {
     lon: "Долгота",
     temp: "Температура",
     condition: "Состояние",
+    feelsLike: "Ощущается как",
+    pressureMm: "Давление",
+    humidity: "Влажность",
   };
   const ambiguosFields = ["name", "imgUrl", "geoid"];
   const translatedCondition = WeatherCondition[city.condition];
@@ -40,31 +43,56 @@ export const CityPin: FC<CityPinProps> = ({ city }) => {
               if (ambiguosFields.includes(key)) {
                 return;
               }
-              if (key === "condition") {
-                return (
-                  <TableBlock
-                    key={city.id + key}
-                    objkey={WeatherFields[key]}
-                    value={translatedCondition}
-                  />
-                );
+              switch (key) {
+                case "condition":
+                  return (
+                    <TableBlock
+                      key={city.id + key}
+                      objkey={WeatherFields[key]}
+                      value={translatedCondition}
+                    />
+                  );
+                case "temp":
+                  return (
+                    <TableBlock
+                      key={city.id + key}
+                      objkey={WeatherFields[key]}
+                      value={value + "°C"}
+                    />
+                  );
+                case "feelsLike":
+                  return (
+                    <TableBlock
+                      key={city.id + key}
+                      objkey={WeatherFields[key]}
+                      value={value + "°C"}
+                    />
+                  );
+                case "pressureMm":
+                  return (
+                    <TableBlock
+                      key={city.id + key}
+                      objkey={WeatherFields[key]}
+                      value={value + " мм"}
+                    />
+                  );
+                case "humidity":
+                  return (
+                    <TableBlock
+                      key={city.id + key}
+                      objkey={WeatherFields[key]}
+                      value={value + "%"}
+                    />
+                  );
+                default:
+                  return (
+                    <TableBlock
+                      key={city.id + key}
+                      objkey={WeatherFields[key]}
+                      value={value}
+                    />
+                  );
               }
-              if (key === "temp") {
-                return (
-                  <TableBlock
-                    key={city.id + key}
-                    objkey={WeatherFields[key]}
-                    value={value + "°C"}
-                  />
-                );
-              }
-              return (
-                <TableBlock
-                  key={city.id + key}
-                  objkey={WeatherFields[key]}
-                  value={value}
-                />
-              );
             })}
           </tbody>
         </table>
