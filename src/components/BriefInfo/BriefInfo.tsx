@@ -2,7 +2,7 @@ import { FC, useCallback } from "react";
 import { SVGOverlay } from "react-leaflet";
 import { City } from "../../models/City";
 import { WeatherCondition } from "../../models/WeatherConditionEnum";
-import { TempWithIcon } from "../TempWithIcon";
+import { TempWithIcon } from "../UI/TempWithIcon";
 import "./BriefInfo.css";
 interface BriefInfoProps {
   city: City;
