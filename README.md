@@ -8,7 +8,7 @@
 ![CodePercent](https://img.shields.io/github/languages/top/gkorzan/redesigned-umbrella-app?style=for-the-badge) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gleb-korzan-4654081a4/) [![build](https://img.shields.io/badge/-Click%20to%20test%20it-green?style=for-the-badge)](https://redesigned-umbrella.herokuapp.com/)
 
 ---
-![GIF demo](https://github.com/gkorzan/redesigned-umbrella-app/blob/master/githubAssets/presentation.gif)
+![GIF demo](https://github.com/gkorzan/redesigned-umbrella-app/blob/master/githubAssets/opt-wide.gif)
 </div>
 
 **Description**
