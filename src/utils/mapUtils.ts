@@ -1,6 +1,6 @@
 import { Map } from "leaflet";
 
-const MAX_ZOOM = 10;
+const MAX_ZOOM = 12;
 const MIN_ZOOM = 6;
 const ZOOM_STEP = 2;
 
