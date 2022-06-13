@@ -12,6 +12,7 @@ import { configureMap, MAX_ZOOM, MIN_ZOOM } from "./utils/mapUtils";
 import { MapControls } from "./components/MapControls";
 import { BriefInfoLayer } from "./components/MapLayers/CItyPinsLayer/BriefInfoLayer";
 import MOCKED_DATA from "./mocked_data.json";
+import { isEmpty } from "./utils/isEmpty";
 
 const style = {
   height: "100vh",
@@ -64,6 +65,10 @@ function App() {
     // console.log(API_URL + "/api/v1/weather");
     const res = await fetch(API_URL + "/api/v1/weather");
     const body = await res.json();
+    if (isEmpty(body)) {
+      setCities(MOCKED_DATA);
+      return;
+    }
     setCities(body);
     // console.log(body);
   };
