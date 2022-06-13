@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { LatLngTuple, Map } from "leaflet";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./App.css";
 import { CityPinsLayer } from "./components/MapLayers/CItyPinsLayer/CityPinsLayer";
 import { City } from "./models/City";
@@ -66,37 +69,48 @@ function App() {
   };
 
   const onMapLoad = () => {
-    fetchWeatherData().catch((e) => {
-      alert(
-        `
-Could not fetch weather data from server
-Reason:"${e}"
-
-Please contact developer: gleb0002@gmail.com`
-      );
-      setCities(MOCKED_DATA);
+    const id = toast.info("Получаю данные о погоде...", {
+      hideProgressBar: true,
     });
+    fetchWeatherData()
+      .then(() => {
+        toast.dismiss(id);
+        toast.success("Данные успешно загружены!", { hideProgressBar: true });
+      })
+      .catch((e) => {
+        toast.dismiss(id);
+        toast.error(
+          "Сервер не отвечает, пожалуйста, свяжитесь с разработчиком: gleb0002@gmail.com",
+          { hideProgressBar: true }
+        );
+        setCities(MOCKED_DATA);
+      });
   };
 
   return (
-    <MapContainer
-      id="map"
-      style={style}
-      center={mapCenter}
-      zoom={MAX_ZOOM}
-      scrollWheelZoom={true}
-      whenReady={onMapLoad}
-      ref={mapRef}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <CityPinsLayer cityList={cities ?? []} />
-      {isBriefLayoutShowing ? <BriefInfoLayer cityList={cities ?? []} /> : null}
+    <>
+      <MapContainer
+        id="map"
+        style={style}
+        center={mapCenter}
+        zoom={MAX_ZOOM}
+        scrollWheelZoom={true}
+        whenReady={onMapLoad}
+        ref={mapRef}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <CityPinsLayer cityList={cities ?? []} />
+        {isBriefLayoutShowing ? (
+          <BriefInfoLayer cityList={cities ?? []} />
+        ) : null}
 
-      <MapControls />
-    </MapContainer>
+        <MapControls />
+      </MapContainer>
+      <ToastContainer theme="colored" />
+    </>
   );
 }
 

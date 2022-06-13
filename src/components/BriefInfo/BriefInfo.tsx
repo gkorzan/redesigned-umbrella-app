@@ -18,7 +18,6 @@ const BriefInfoWrapper = ({ children }: { children: any }) => {
       width="10em"
       height="5em"
       style={{ opacity: 0.85 }}
-      onClick={() => console.log("clicked")}
       className="card"
     >
       {children}
