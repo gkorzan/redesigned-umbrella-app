@@ -7,8 +7,8 @@ import "./BriefInfo.css";
 interface BriefInfoProps {
   city: City;
 }
-const OFFSET_V = 0.01;
-const OFFSET_H = 0.01;
+const OFFSET_V = 0.005;
+const OFFSET_H = 0.005;
 const HEIGHT = OFFSET_V + 0.5;
 const WIDTH = OFFSET_H + 0.5;
 
